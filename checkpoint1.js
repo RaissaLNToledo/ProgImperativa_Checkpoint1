@@ -68,6 +68,8 @@ function microondas (nomeComida, tempoDoUsuario) {
     }
 }
 
+console.log('Temos 5 opções de prato:\n 1 - Pipoca \n 2 - Macarrão \n 3 - Carne \n 4 - Feijão \n 5 - Brigadeiro \n O microondas aceita tanto o nome do prato (com as diferentes possibilidades de escrita) como o número do prato')
+
 //Testes dos cenários possiveis
 microondas(1, 10); //Prato pronto
 microondas('Pipoca', 8); //Tempo insuficiente
