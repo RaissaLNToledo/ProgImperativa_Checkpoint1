@@ -31,6 +31,7 @@ function microondas (nomeComida, tempoDoUsuario) {
     switch (nomeComida) {
         case 'pipoca':
         case 'Pipoca':
+        case 1:
             tempoDoPrato = tempoPipoca;
             analiseDoTempo(tempoDoUsuario, tempoDoPrato);
             break;
@@ -38,11 +39,13 @@ function microondas (nomeComida, tempoDoUsuario) {
         case 'Macarrao':
         case 'macarrão':
         case 'Macarrão':
+        case 2:
             tempoDoPrato = tempoMacarrao;
             analiseDoTempo(tempoDoUsuario, tempoDoPrato);
             break;
         case 'carne':
         case 'Carne':
+        case 3:
             tempoDoPrato = tempoCarne;
             analiseDoTempo(tempoDoUsuario, tempoDoPrato);
             break;
@@ -50,11 +53,13 @@ function microondas (nomeComida, tempoDoUsuario) {
         case 'Feijao':
         case 'feijão':
         case 'Feijão':
+        case 4:
             tempoDoPrato = tempoFeijao;
             analiseDoTempo(tempoDoUsuario, tempoDoPrato);
             break;
         case 'brigadeiro':
         case 'Brigadeiro':
+        case 5:
             tempoDoPrato = tempoBrigadeiro;
             analiseDoTempo(tempoDoUsuario, tempoDoPrato);
             break;
@@ -64,13 +69,14 @@ function microondas (nomeComida, tempoDoUsuario) {
 }
 
 //Testes dos cenários possiveis
-microondas('pipoca', 10); //Prato pronto
+microondas(1, 10); //Prato pronto
 microondas('Pipoca', 8); //Tempo insuficiente
 microondas('pipoca', 25); //Comida Queimou
 microondas('Pipoca', 30); // Kabuum
 
 microondas('macarrao', 5); //Tempo insuficiente
 microondas('Macarrao', 8); //Prato pronto
+microondas(2, 15); //Prato pronto
 microondas('macarrão', 17); //Comida Queimou
 microondas('Macarrão', 24); // Kabuum
 
@@ -78,16 +84,18 @@ microondas('carne', 5); //Tempo insuficiente
 microondas('Carne', 20); //Prato pronto
 microondas('carne', 30); //Prato pronto
 microondas('Carne', 32); //Comida Queimou
-microondas('carne', 47); // Kabuum
+microondas(3, 47); // Kabuum
 
 microondas('feijao', 10); //Tempo insuficiente
 microondas('Feijao', 14); //Prato pronto
 microondas('feijão', 25); //Comida Queimou
 microondas('Feijão', 40); // Kabuum
+microondas(4, 40); // Kabuum
 
 microondas('brigadeiro', 5); //Tempo insuficiente
 microondas('Brigadeiro', 10); //Prato pronto
-microondas('brigadeiro', 20); //Comida Queimou
+microondas(5, 20); //Comida Queimou
 microondas('Brigadeiro', 28); // Kabuum
 
 microondas('arroz', 28); //Prato inexistente
+microondas(7, 28); //Prato inexistente
